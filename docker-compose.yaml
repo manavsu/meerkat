@@ -43,7 +43,7 @@ services:
     container_name: prometheus
     volumes:
       - prometheus-data:/prometheus
-      - ./prometheus.yaml:/etc/prometheus/prometheus.yaml:ro
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
     networks:
       - reverse_proxy_network
     ports:
