@@ -44,6 +44,8 @@ services:
     volumes:
       - prometheus-data:/prometheus
       - ./prometheus.yaml:/etc/prometheus/prometheus.yaml:ro
+    networks:
+      - reverse_proxy_network
     ports:
       - "9090:9090"
     restart: unless-stopped
